@@ -1,0 +1,159 @@
+.heading{
+    padding:0 5px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+.heading__topic{
+    font-size:3rem;
+    text-align: center;
+    margin-bottom:10px;
+}
+.heading__description{
+    font-size:1.6rem;
+    line-height: 2.4rem;
+}
+/* part 1 */
+.partOne{
+    width:100%;
+    padding:0 5px;
+}
+.partOne__heading{
+    font-size:2.4rem;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.partOne__description{
+    font-size:1.6rem;
+}
+.partOne__inputElements{
+    margin:10px 0;
+    width:100%;
+    display:flex;
+    flex-wrap:nowrap;
+}
+/* .getTheNumber:hover{
+    border:1.5px solid #28a745;
+} */
+/* part2 */
+.partTwo{
+    width:100%;
+    padding:0 5px;
+}
+.partTwo__heading{
+    font-size:2.4rem;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.partTwo__description{
+    font-size:1.6rem;
+}
+.partTwo__inputElements{
+    margin:10px 0;
+    width:100%;
+    display:flex;
+    flex-wrap:nowrap;
+}
+.seperation
+{
+    margin-bottom:var(--distance-default);
+}
+
+/* part3 */
+
+.partThree{
+    width:100%;
+    padding:0 5px;
+}
+.partThree__heading{
+    font-size:2.4rem;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.partThree__description{
+    font-size:1.6rem;
+}
+.partThree__inputElements{
+    margin:10px 0;
+    width:100%;
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+/* partFour */
+.partFour{
+    width:100%;
+    padding:0 5px;
+}
+.partFour__heading{
+    font-size:2.4rem;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.partFour__description{
+    font-size:1.6rem;
+}
+.partFour__inputElements{
+    margin:10px 0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.partFour__inputPart{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.partFour__btnPart{
+    display:flex;
+    align-items:center;
+}
+.partFour__inputElement{
+    border-radius:3px;
+    display:flex;
+    align-items:center;
+    margin-left:5px;
+}
+.partFour__inputElement .getTheNumber
+{
+    width:50px;
+    height:30px;
+}
+.partFour__inputElement span{
+    font-size:1.6rem;
+}
+.partFour__showAnswering{
+    padding-top:10px;
+    padding-left:10px;
+    width:100%;
+    outline:none;
+    min-height:250px;
+    margin-top:10px;
+    font-size:1.6rem;
+    color:var(--text-color);
+    font-weight:400;
+    line-height:2.2rem;
+}
+/* footer */
+.spacer
+{
+    width:100%;
+    height:100px;
+
+}
+/* tracking */
+.tracking{
+    font-size:1.6rem;
+    color:var(--text-color)
+}
+/* checking */
+.checking input{
+    width:20px;
+    height:20px;
+}
+.checking span{
+    margin-left:10px;
+    font-size:1.6rem;
+}

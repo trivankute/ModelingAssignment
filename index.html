@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelingAssignment</title>
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="grid becomeFlex">
+        <div class="grid__column-8 container">
+                <div class="heading">
+                    <h3 class="heading__topic">
+                        Welcome to Modeling Assignment
+                    </h3>
+                    <span class="heading__description">
+                        The website was coded based on the assignment's requirements.
+                    </br>
+                        The clients can interact with the Petri-Net's blocks and enjoy the movements.
+                    </span>
+                </div>
+
+                <div class="boudary"></div>
+
+                <div class="partOne">
+                    <h3 class="partOne__heading">Item 1: Patient Network</h3>
+                    <span class="partOne__description">Click on any transitions to fire it!</span>
+                </br>
+                    <span class="partOne__description">Set button used for setting the number (from 1 to 999) of patients at "Wait" state, at any time.</span>
+                </br>    
+                    <span class="partOne__description">Reset button used for setting the model to default state.</span>
+                </br> 
+                    <span class="partOne__description">Attention: please wait until the end of animations before press reset button.</span>
+
+                    <div class="partOne__inputElements">
+                        <input type="text" class="getTheNumber" 
+                        placeholder="Enter the number of patients here">
+                        <button class="btn btnSet btn-outline-success btn-lg ">Set</button>
+                        <button class="btn btnReset btn-outline-success btn-lg ">Reset</button>
+                    </div>
+                    <span class="problem_showing"></span>
+                    <div class="blockShowing seperation">
+                        <div class="partOne__state1 structure state distanceRight word__inside">
+                            <div class="state__word-above">
+                                Wait
+                            </div>
+                            <span>5</span>
+                        </div>
+                        <div class="partOne__transition1 structure transition distanceRight word__inside">
+                            <div class=" state__word-bottom">
+                                Start
+                            </div>
+                            <div class="leftToRight_In"></div>
+                        </div>
+
+                        <div class="partOne__state2 structure state distanceRight word__inside">
+                            <div class=" state__word-above">
+                                Inside
+                            </div>
+                            <div class="leftToRight_In"></div>
+                            <span></span>
+                        </div>
+
+                        <div class="partOne__transition2 structure transition distanceRight word__inside">
+                            <div class=" state__word-bottom">
+                                Change
+                            </div>
+                            <div class="leftToRight_In"></div>
+                        </div>
+
+                        <div class="partOne__state3 structure state word__inside">
+                            <div class=" state__word-above">
+                                Done
+                            </div>
+                            <div class="leftToRight_In"></div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <span class="tracking"></span>
+                    <div class="checking flexDirection--row">
+                        <input type="checkbox">
+                        <span>Auto-firing</span>
+                    </div>
+                </div>
+
+                <div class="boudary"></div>
+
+                <div class="partTwo">
+                    <h3 class="partTwo__heading">Item 2: Specialist Network</h3>
+                    <span class="partTwo__description">Click on any transitions to fire it!</span>
+                </br>
+                <span class="partOne__description">Set button used for setting the number (from 1 to 999) of specialists at "Free" state, at any time.</span>
+                </br>    
+                <span class="partOne__description">Reset button used for setting the model to default state.</span>
+                </br> 
+                <span class="partOne__description">Attention: please wait until the end of animations before press reset button.</span>
+                    <div class="partTwo__inputElements">
+                        <input type="text" class="getTheNumber" 
+                        placeholder="Enter the numbers of specialist here">
+                        <button class="btn btnSet btn-outline-success btn-lg ">Set</button>
+                        <button class="btn btnReset btn-outline-success btn-lg ">Reset</button>
+                    </div>
+                    <span class="problem_showing"></span>
+                    <div class="blockShowing flexDirection--column">
+
+                        <div class="seperation flexDirection--row">
+                            <div class="partTwo__state1 structure state distanceRight word__inside">
+                                <div class="state__word-above">
+                                    Free
+                                </div>
+                                <div class="rightToLeft_In"></div>
+                                <span>5</span>
+                            </div>
+    
+                            <div class="partTwo__transition1 structure transition distanceRight word__inside">
+                                <div class=" state__word-bottom">
+                                    End
+                                </div>
+                                <div class="rightToLeft_In"></div>
+                            </div>
+    
+                            <div class="partTwo__state2 structure state word__inside">
+                                <div class=" state__word-above">
+                                    Docu
+                                </div>
+                                <div class="bottomToTop_In"></div>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="seperation flexDirection--row">
+                            <div class="partTwo__transition2 structure transition distanceRight word__inside">
+                                <div class=" state__word-bottom">
+                                    Start
+                                </div>
+                                <div class="topToBottom_In"></div>
+                            </div>
+    
+                            <div class="partTwo__state3 structure state distanceRight word__inside">
+                                <div class=" state__word-above">
+                                    Busy
+                                </div>
+                                <div class="leftToRight_In"></div>
+                                <span></span>
+                            </div>
+    
+                            <div class="partTwo__transition3 structure transition  word__inside">
+                                <div class=" state__word-bottom">
+                                    Change
+                                </div>
+                                <div class="leftToRight_In"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="tracking">Current marking: </span>
+                    <div class="checking flexDirection--row">
+                        <input type="checkbox">
+                        <span>Auto-firing</span>
+                    </div>
+                </div>
+
+                <div class="boudary"></div>
+
+                <div class="partThree">
+                    <h3 class="partThree__heading">Item 3: Superimposed Network</h3>
+                    <span class="partThree__description">Click on any transitions to fire it!</span>
+                </br>
+                <span class="partOne__description">Set button used for setting the number (from 1 to 999) of patients at "Wait" state and of specialists at "Free" state, at any time.</span>
+            </br>    
+                <span class="partOne__description">Reset button used for setting the model to default state.</span>
+            </br> 
+                <span class="partOne__description">Attention: Please wait until the end of animations before press reset button.</span>
+                    <div class="partThree__inputElements">
+                        <input type="text" class="getTheNumber" 
+                        placeholder="Enter the numbers of patients, specialist here (For example: 1,2)">
+                        <button class="btn btnSet btn-outline-success btn-lg ">Set</button>
+                        <button class ="btn btnReset btn-outline-success btn-lg ">Reset</button>
+                    </div>
+                    <span class="problem_showing"></span>
+                    <div class="blockShowing flexDirection--column">
+
+                        <div class="seperation flexDirection--row">
+                            <div class="partThree__state1 structure state distanceRight word__inside">
+                                <div class="state__word-above">
+                                    Free
+                                </div>
+                                <div class="rightToLeft_In"></div>
+                                <span>5</span>
+                            </div>
+    
+                            <div class="partThree__transition1 structure transition distanceRight word__inside">
+                                <div class=" state__word-bottom">
+                                    End
+                                </div>
+                                <div class="rightToLeft_In"></div>
+                            </div>
+    
+                            <div class="partThree__state2 structure state word__inside">
+                                <div class=" state__word-above">
+                                    Docu
+                                </div>
+                                <div class="bottomToTop_In"></div>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="seperation flexDirection--row">
+                            <div class="partThree__state3 structure state distanceRight word__inside">
+                                <div class=" state__word-above">
+                                    Wait
+                                </div>
+                                <span>5</span>
+                            </div>
+
+                            <div class="partThree__transition2 structure transition distanceRight word__inside">
+                                <div class=" state__word-bottom">
+                                    Start
+                                </div>
+                                <div class="topToBottom_In"></div>
+                                <div class="leftToRight_In"></div>
+                            </div>
+
+                            <div class="partThree__state4 structure state distanceRight word__inside">
+                                <div class=" state__word-above">
+                                    Busy
+                                </div>
+                                <div class="leftToRight_In"></div>
+                                <span></span>
+                            </div>
+
+                            <div class="partThree__transition3 structure transition distanceRight word__inside">
+                                <div class=" state__word-bottom">
+                                    Change
+                                </div>
+                                <div class="centerToBottomLeft_In"></div>
+                                <div class="leftToRight_In"></div>
+                            </div>
+
+                            <div class="partThree__state5 structure state word__inside">
+                                <div class=" state__word-above">
+                                    Done
+                                </div>
+                                <div class="leftToRight_In"></div>
+                                <span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="seperation flexDirection--row">
+                            <div class="partThree__state6 structure state word__inside">
+                                <div class=" state__word-above">
+                                    Inside
+                                </div>
+                                <div class="bottomRightToCenter_In_Token"></div>
+                                <div class="bottomRightToCenter_In"></div>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <span class="tracking">Current marking: </span>
+                    <div class="checking flexDirection--row">
+                        <input type="checkbox">
+                        <span>Auto-firing</span>
+                    </div>
+                </div>
+
+                <div class="boudary"></div>
+
+                <div class="partFour">
+                    <h3 class="partFour__heading">Item 4: Reachable marking calculator</h3>
+                    <div class="partFour__inputElements">
+                        <span class="partOne__description">Note: To ensure partFour gives answer instantaneously, please types only number (from 0 to 5) to the box.</span>
+                    </br>
+                    
+                        <div class="partFour__inputPart">
+                            <span class="partFour__description">Enter your initial marking: [</span>
+                                <div class="partFour__inputElement">
+                                    <input type="text" class="getTheNumber" >
+                                    <span>.wait,</span>
+                                </div>
+                                <div class="partFour__inputElement">
+                                    <input type="text" class="getTheNumber" >
+                                    <span>.free,</span>
+                                </div>
+                                <div class="partFour__inputElement">
+                                    <input type="text" class="getTheNumber" >
+                                    <span>.inside,</span>
+                                </div>
+                                <div class="partFour__inputElement">
+                                    <input type="text" class="getTheNumber" >
+                                    <span>.busy,</span>
+                                </div>
+                                <div class="partFour__inputElement">
+                                    <input type="text" class="getTheNumber" >
+                                    <span>.docu,</span>
+                                </div>
+                                <div class="partFour__inputElement">
+                                    <input type="text" class="getTheNumber" >
+                                    <span>.done ]</span>
+                                </div>
+                        </div>
+                        <div class="partFour__btnPart">
+                            <button class="btn btnSet btnFind btn-outline-success btn-lg ">Find</button>
+                            <button class="btn btnReset btnCount btn-outline-success btn-lg ">Count</button>
+                        </div>
+                    </div>
+                    <span class="problem_showing"></span>
+                    <span class="problem_showing"></span>
+                    <span class="problem_showing"></span>
+                    <div class="partFour__description">All firing sequences and reachable markings will be shown below:</div>
+                    <textarea class="partFour__showAnswering"name="" id="" cols="30" rows="20"></textarea>
+                </div>
+
+                <div class="spacer"></div>
+
+                
+        </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="main.js">
+        
+    </script>
+    <script>
+        // partOne
+        setBtnChangeData({
+            part: 'partOne__inputElements',
+            states:['partOne__state1'],
+            2:'partOne__state2',
+            3:'partOne__state3'
+        })
+        token_Movement({
+            state1:'partOne__state1',
+            transition:'partOne__transition1',
+            state2:'partOne__state2',
+            token_Movement1: 'leftToRight_In_Token',
+            token_Movement2: 'leftToRight_Out_Token'
+        })
+        token_Movement({
+            state1:'partOne__state2',
+            transition:'partOne__transition2',
+            state2:'partOne__state3',
+            token_Movement1: 'leftToRight_In_Token',
+            token_Movement2: 'leftToRight_Out_Token'
+        })
+        // partTwo
+        setBtnChangeData({
+            part: 'partTwo__inputElements',
+            states:['partTwo__state1'],
+            2:'partTwo__state2',
+            3:'partTwo__state3'
+        })
+        token_Movement({
+            state1:'partTwo__state1',
+            transition:'partTwo__transition2',
+            state2:'partTwo__state3',
+            token_Movement1: 'topToBottom_In_Token',
+            token_Movement2: 'leftToRight_Out_Token'
+        })
+        token_Movement({
+            state1:'partTwo__state3',
+            transition:'partTwo__transition3',
+            state2:'partTwo__state2',
+            token_Movement1: 'leftToRight_In_Token',
+            token_Movement2: 'bottomToTop_Out_Token'
+        })
+        token_Movement({
+            state1:'partTwo__state2',
+            transition:'partTwo__transition1',
+            state2:'partTwo__state1',
+            token_Movement1: 'rightToLeft_In_Token',
+            token_Movement2: 'rightToLeft_Out_Token'
+        })
+        // partThree
+        setBtnChangeData({
+            part: 'partThree__inputElements',
+            states:['partThree__state3','partThree__state1'],
+            2:'partThree__state2',
+            3:'partThree__state4',
+            4:'partThree__state5',
+            5:'partThree__state6'
+        })
+        token_Movement({
+            state1:'partThree__state2',
+            transition:'partThree__transition1',
+            state2:'partThree__state1',
+            token_Movement1: 'rightToLeft_In_Token',
+            token_Movement2: 'rightToLeft_Out_Token',
+        })
+        token_Movement2({
+            state1:'partThree__state1',
+            state3:'partThree__state3',
+            transition:'partThree__transition2',
+            state2:'partThree__state4',
+            state4:'partThree__state6',
+            token_Movement1: 'leftToRight_In_Token',
+            token_Movement2: 'leftToRight_Out_Token',
+            token_Movement3: 'topToBottom_In_Token',
+            token_Movement4: 'bottomRightToCenter_Out_Token'
+        })
+        token_Movement2({
+            state1:'partThree__state4',
+            state3:'partThree__state6',
+            transition:'partThree__transition3',
+            state2:'partThree__state5',
+            state4:'partThree__state2',
+            token_Movement1: 'leftToRight_In_Token',
+            token_Movement2: 'leftToRight_Out_Token',
+            token_Movement3: 'centerToBottomLeft_In_Token',
+            token_Movement4: 'bottomToTop_Out_Token'
+        })
+        // item 4
+        item4_Running({
+            taking_Data_Places:'partFour__inputElement',
+            data_Number_Childs:6,
+            text_Area:'partFour__showAnswering',
+            find:'partFour__btnPart .btnFind',
+            count:'partFour__btnPart .btnCount'
+        })
+        ////////////////////////////////
+        Validation(
+            {
+                parts:'partOne',
+                mainError:"Please types number to the setting box",
+                rules:[
+                Validation.tooLarge(999),
+                Validation.smallerThan(0)
+                ]
+            }
+        )
+        Validation(
+            {
+                parts:'partTwo',
+                mainError:"Please types number to the setting box",
+                rules:[
+                Validation.tooLarge(999),
+                Validation.smallerThan(0)
+                ]
+            }
+        )
+        Validation(
+            {
+                parts:'partThree',
+                mainError:'Please types first number + "," + second number to the setting box',
+                rules:[
+                Validation.tooLarge(999),
+                Validation.smallerThan(0)
+                ]
+            }
+        )
+        Validation(
+            {
+                parts:'partFour',
+                mainError:'Please types number to the setting box',
+                rules:[
+                Validation.tooLarge(10),
+                Validation.smallerThan(-1)
+                ]
+            }
+        )
+        // for Trackings
+        Tracking1({
+            parts: 'partOne',
+            forTracking: ['partOne__state1','partOne__state2','partOne__state3']
+        })
+        Tracking2({
+            parts: 'partTwo',
+            forTracking: ['partTwo__state1','partTwo__state2','partTwo__state3']
+        })
+        Tracking3({
+            parts: 'partThree',
+            forTracking: ['partThree__state1','partThree__state2','partThree__state3',
+            'partThree__state4','partThree__state5','partThree__state6']
+        })
+        // for checking
+        Checking1({
+            parts: 'partOne',
+            statesForChecking: ['partOne__state1','partOne__state2','partOne__state3'],
+            transitionsForChecking:['partOne__transition1','partOne__transition2']
+        })
+        Checking2({
+            parts: 'partTwo',
+            statesForChecking: ['partTwo__state1','partTwo__state2','partTwo__state3'],
+            transitionsForChecking:['partTwo__transition1','partTwo__transition2','partTwo__transition3']
+        })
+        Checking3({
+            parts: 'partThree',
+            statesForChecking: ['partThree__state1','partThree__state2','partThree__state3',
+            'partThree__state4','partThree__state5','partThree__state6'],
+            transitionsForChecking:['partThree__transition1','partThree__transition2','partThree__transition3']
+        })
+    </script>
+</body>
+</html>
